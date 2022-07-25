@@ -1,20 +1,20 @@
-import * as React from 'react';
-import { NextPage } from 'next';
-import type { AppProps } from 'next/app';
-import { ThemeProvider } from 'styled-components';
-import GlobalStyles from '@/styles/global';
-import { theme } from '@/styles/themes/main';
+import * as React from 'react'
+import { NextPage } from 'next'
+import type { AppProps } from 'next/app'
+import { ThemeProvider } from 'styled-components'
+import GlobalStyles from '@/styles/global'
+import { theme } from '@/styles/themes/main'
 
 export type NextPageWithLayout = NextPage & {
-  getLayout?: (page: React.ReactElement) => React.ReactNode;
-};
+  getLayout?: (page: React.ReactElement) => React.ReactNode
+}
 
 type MyAppProps = AppProps & {
-  Component: NextPageWithLayout;
-};
+  Component: NextPageWithLayout
+}
 
 function MyApp({ Component, pageProps }: MyAppProps) {
-  const getLayout = Component.getLayout ?? ((page) => page);
+  const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
     <>
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
         <GlobalStyles />
       </ThemeProvider>
     </>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp
