@@ -6,13 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "generate": "plop --plopfile generators/plopfile.js"
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "lint": "eslint src --ext ts,tsx --no-eslintrc --config .eslintrc.json --max-warnings=0",
+    "generate": "plop --plopfile generators/plopfile.js",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint --fix"
+    ]
   },
   "dependencies": {
     "next": "12.2.3",
     "plop": "^3.1.1",
     "polished": "^4.2.2",
+    "prettier": "^2.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^5.3.5"
@@ -33,6 +41,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "typescript": "4.7.4"
   }
 }
