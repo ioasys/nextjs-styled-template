@@ -13,13 +13,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
+    "incremental": false,
     "baseUrl": "src",
     "paths": {
       "@/*": ["./*"],
-      "brand/*": ["../public/brand/*"],
-      "icons/*": ["../public/icons/*"],
-      "logos/*": ["../public/logos/*"]
     },
   },
   "include": [
