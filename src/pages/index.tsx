@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { NextPageWithLayout } from 'pages/_app';
+import type { NextPageWithLayout } from '@/pages/_app';
 
 const Index: NextPageWithLayout = () => <h1>Home</h1>;
 
