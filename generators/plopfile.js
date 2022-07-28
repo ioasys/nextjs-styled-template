@@ -1,6 +1,6 @@
 module.exports = (
   /** @type {import('plop').NodePlopAPI} */
-  plop
+  plop,
 ) => {
   plop.setGenerator('Component', {
     description: 'Create a component with same name folder',
@@ -32,7 +32,7 @@ module.exports = (
         skipIfExist: true,
       },
     ],
-  });
+  })
 
   plop.setGenerator('Page', {
     description: 'Create a page with default layout',
@@ -55,7 +55,7 @@ module.exports = (
     ],
 
     actions: (data) => {
-      var actions = [];
+      var actions = []
 
       if (data.createFolder) {
         actions.push({
@@ -63,17 +63,17 @@ module.exports = (
           path: '../src/pages/{{dashCase name}}/index.tsx',
           templateFile: 'templates/page/Page.tsx.hbs',
           skipIfExist: true,
-        });
+        })
       } else {
         actions.push({
           type: 'add',
           path: '../src/pages/{{dashCase name}}.tsx',
           templateFile: 'templates/page/Page.tsx.hbs',
           skipIfExist: true,
-        });
+        })
       }
 
-      return actions;
+      return actions
     },
-  });
-};
+  })
+}
