@@ -1,34 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nextjs styled-components template
 
-## Getting Started
+![GitHub repo size](https://img.shields.io/github/repo-size/ioasys-org/nextjs-styled-template?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/ioasys-org/nextjs-styled-template?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/ioasys-org/nextjs-styled-template?style=for-the-badge)
+![Github issues](https://img.shields.io/github/issues/ioasys-org/nextjs-styled-template?style=for-the-badge)
+![Github open pull requests](https://img.shields.io/github/issues-pr-raw/ioasys-org/nextjs-styled-template?style=for-the-badge)
 
-First, run the development server:
+> Template desenvolvido para novas aplicações que utilizam nextjs em conjunto com styled-components
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 📖 Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Esse template foi desenvolvido com a intenção de facilitar e padronizar os novos projetos que utilizam nextjs em conjunto com styled-components. A estrutura de pastas utilizada teve como referência o projeto desenvolvido para o [px-bank](https://bitbucket.org/ioasys/pxbank-admin-frontend/src/master/)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Dependências
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- nodejs >= 16.14
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Instalação
 
-## Learn More
+- `npm run install`
 
-To learn more about Next.js, take a look at the following resources:
+### Executando
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Estrutura de pastas
 
-## Deploy on Vercel
+- @types
+  - Tipagens globais da aplicação
+- assets
+  - Centraliza as importações de arquivos estáticos
+- components
+  - Componentes gerais da aplicação
+- constants
+  - Centraliza constantes da aplicação, como por exemplo as variáveis de ambiente (.env)
+- contexts
+  - Contextos da aplicação
+- hooks
+  - Hooks customizados
+- layouts
+  - Layouts que atendem múltiplas páginas
+- lib
+  - Configurações específicas para utilização de uma biblioteca de terceiros
+- pages
+  - Páginas da aplicação
+- services
+  - Configuração de serviços, como por exemplo requisições http e cache
+- styles
+  - Estilizações globais
+- utils
+  - Lógicas que podem ser compartilhadas com toda a aplicação
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🤝 Colaboradores
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://github.com/pedrolgcs.png" width="100px;" alt="Foto do Mark Zuckerberg"/><br>
+        <sub>
+          <b>Pedro Henrique</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+<!-- ## 😄 Seja um dos contribuidores<br>
+
+Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir. -->
+
+## 📝 Licença
+
+Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
