@@ -10,7 +10,7 @@ import {
   spacings,
   typography,
   transitions,
-} from 'styles/tokens'
+} from '@/styles/tokens'
 
 export const theme = {
   title: 'main',
