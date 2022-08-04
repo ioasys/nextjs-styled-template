@@ -10,28 +10,48 @@ module.exports = (
         name: 'name',
         message: 'What is your component name?',
       },
+      {
+        type: 'confirm',
+        name: 'createTests',
+        message: 'Would you like to create a tests?',
+      },
     ],
 
-    actions: [
-      {
+    actions: (data) => {
+      const actions = []
+
+      actions.push({
         type: 'add',
         path: '../src/components/{{pascalCase name}}/index.ts',
         templateFile: 'templates/component/index.ts.hbs',
         skipIfExist: true,
-      },
-      {
+      })
+
+      actions.push({
         type: 'add',
         path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
         templateFile: 'templates/component/Component.tsx.hbs',
         skipIfExist: true,
-      },
-      {
+      })
+
+      actions.push({
         type: 'add',
         path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.styles.ts',
         templateFile: 'templates/component/Component.styles.ts.hbs',
         skipIfExist: true,
-      },
-    ],
+      })
+
+      if (data.createTests) {
+        actions.push({
+          type: 'add',
+          path: '../src/components/{{pascalCase name}}/__tests__/{{pascalCase name}}.tests.tsx',
+          templateFile: 'templates/component/Component.tests.tsx.hbs',
+          skipIfExist: true,
+        })
+      }
+
+      return actions
+    },
   })
 
   plop.setGenerator('Page', {
